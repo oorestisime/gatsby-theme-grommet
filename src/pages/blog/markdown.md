@@ -3,7 +3,7 @@ path: /markdown
 title: "Markdown features of this blog"
 date: 2018-12-06
 tags: ["Markdown","Grommet", "Theme"]
-photo: ./images/sunset.jpg
+photo: ./img/sunset.jpg
 
 ---
 
