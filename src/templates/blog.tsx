@@ -15,7 +15,7 @@ import Photo from '../components/Photo'
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    a: Anchor
+    a: Anchor,
     'rehype-image': Photo,
     grid: Grid,
   }

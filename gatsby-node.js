@@ -92,7 +92,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     module: {
       rules: [
         {
-          test: /\.ts$/,
+          test: /\.tsx$/,
           include: path.dirname(require.resolve("gatsby-theme-grommet")),
           use: [loaders.js()],
         },
