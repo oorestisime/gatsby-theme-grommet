@@ -3,6 +3,8 @@ path: /markdown
 title: "Markdown features of this blog"
 date: 2018-12-06
 tags: ["Markdown","Grommet", "Theme"]
+photo: ./images/sunset.jpg
+
 ---
 
 Besides the usual markdown feature this theme makes use of prismjs for source code

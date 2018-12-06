@@ -3,6 +3,8 @@ path: /introduction
 title: "Gatsby theme grommet coming to town"
 date: 2018-12-06
 tags: ["Gatsby","Grommet", "Theme"]
+photo: ./images/sunset.jpg
+
 ---
 
 Both [gatsby](https://gatsbyjs.org) and [grommet](https://grommet.io) recently released their V2 and I've been playing around with both of them both contributing

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-grommet",
   "description": "Gatsby theme with grommet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Orestis Ioannou <oorestisime@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.9.2",
