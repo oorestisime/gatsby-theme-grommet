@@ -87,13 +87,21 @@ exports.createPages = ({
   });
 };
 
+
+exports.onCreateBabelConfig = ({ actions }, options) => {
+  actions.setBabelPreset({
+    name: `@babel/preset-typescript`,
+    options,
+  })
+}
+
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
         {
           test: /\.tsx$/,
-          include: path.dirname(require.resolve("gatsby-theme-grommet")),
+          include: path.dirname(path.resolve("gatsby-theme-grommet")),
           use: [loaders.js()],
         },
       ],
