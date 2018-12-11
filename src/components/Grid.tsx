@@ -7,7 +7,7 @@ const GridComponent = props => (
     {size => (
       <Grid
         align="start"
-        columns={size !== 'small' && { count: 'fill', size: 'small' }}
+        columns={size !== 'small' && { count: 'fill', size: 'medium' }}
         gap="medium"
       >
         {props.children.filter(child => child !== '\n').map(child => (

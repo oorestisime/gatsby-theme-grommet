@@ -28,7 +28,8 @@ module.exports = {
         plugins: [{
             resolve: 'gatsby-remark-rehype-images',
             options: {
-              tag: 'rehype-image'
+              tag: 'rehype-image',
+              quality: 100
             },
           },
           'gatsby-remark-prismjs',

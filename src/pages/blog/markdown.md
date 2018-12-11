@@ -21,11 +21,11 @@ module.exports = {
 
 and gatsby-remark-rehype-images for turning markdown images into gatsby-image components both in single form:
 
-<rehype-image src="images/fiji.jpg"></rehype-image>
+<rehype-image src="./img/fiji.jpg"></rehype-image>
 
 or in grid:
 
 <grid>
-<rehype-image src="images/fiji.jpg"></rehype-image>
-<rehype-image src="images/sunset.jpg"></rehype-image>
+<rehype-image src="./img/fiji.jpg"></rehype-image>
+<rehype-image src="./img/sunset.jpg"></rehype-image>
 </grid>
