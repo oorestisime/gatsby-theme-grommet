@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   hero: {
     title: "Gatsby theme Grommet",
     subtitle: "This an example of gatsby-theme-grommet",
@@ -20,4 +20,12 @@ export default {
       path: '/blog'
     }
   ],
+  instagram: {
+    username: 'oasome.blog',
+    instagram_id: undefined,
+  },
+  analytics: {
+    gaId: undefined,
+    domain: undefined,
+  }
 }

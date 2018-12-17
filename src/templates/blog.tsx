@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import Tags from '../components/Tags'
 import Grid from '../components/Grid'
 import Photo from '../components/Photo'
-
+import NonStretchedImage from '../components/NonStretchedImage'
 
 // eslint-disable-next-line new-cap
 const renderAst = new rehypeReact({
@@ -17,7 +17,7 @@ const renderAst = new rehypeReact({
   components: {
     a: Anchor,
     'rehype-image': Photo,
-    grid: Grid,
+    grid: Grid
   }
 }).Compiler
 
@@ -43,6 +43,9 @@ const BlogPage: React.SFC<BlogPageType> = props => (
         <Heading alignSelf="center" level="3">
           {props.data.markdownRemark.frontmatter.title}
         </Heading>
+        {props.data.markdownRemark.frontmatter.photo && (
+          <NonStretchedImage fluid={props.data.markdownRemark.frontmatter.photo.childImageSharp.fluid} />
+        )}
         {renderAst(props.data.markdownRemark.htmlAst)}
         <Box direction="row-responsive" justify="between" margin={{ top: 'medium' }}>
           <Box align="center" direction="row" gap="xsmall">
@@ -67,6 +70,17 @@ export const pageQuery = graphql`
         tags
         date(formatString: "MMMM DD, YYYY")
         title
+        photo {
+          childImageSharp {
+            fluid(maxWidth: 720, quality: 100) {
+              aspectRatio
+              src
+              sizes
+              srcSet
+              presentationWidth
+            }
+          }
+        }
       }
     }
   }

@@ -17,7 +17,6 @@ type GithubRepoProps = {
   }
 }
 const GithubRepo: React.SFC<GithubRepoProps> = ({ repo }) => {
-  console.log(repo)
   return (
   <Box margin="xsmall" animation="fadeIn" pad="xsmall" elevation="small">
     <Heading level="3" margin="xsmall">

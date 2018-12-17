@@ -5,6 +5,7 @@ import data from '../data'
 import SiteContext from '../context'
 import { customTheme, GlobalTheme } from '../theme'
 import Footer from './Footer'
+import InstaFeed from './InstaFeed';
 
 type LayoutProps = {
   children: ReactChild[]
@@ -15,6 +16,7 @@ const Layout: React.SFC<LayoutProps> = props => (
     <Grommet theme={customTheme}>
       <GlobalTheme />
       {props.children}
+      <InstaFeed />
       <Footer />
     </Grommet>
   </SiteContext.Provider>

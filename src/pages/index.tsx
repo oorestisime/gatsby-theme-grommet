@@ -1,10 +1,8 @@
 import React from 'react'
-import { Box, Paragraph, Grid, Anchor, Text, Button } from 'grommet'
-import { Github } from 'grommet-icons'
+import { Box, Paragraph, Button } from 'grommet'
 import { graphql, push } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Skills from '../components/Skills'
 import GithubRepo from '../components/GithubRepo'
 import Post from '../components/Post'
 import IndexSection from '../components/IndexSection'
@@ -84,6 +82,17 @@ export const pageQuery = graphql`
             path
             tags
             date(formatString: "MMMM DD, YYYY")
+            photo {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 100) {
+                  aspectRatio
+                  src
+                  sizes
+                  srcSet
+                  presentationWidth
+                }
+              }
+            }
           }
         }
       }

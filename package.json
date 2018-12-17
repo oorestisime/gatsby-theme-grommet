@@ -19,10 +19,11 @@
     "gatsby-plugin-sharp": "^2.0.0",
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-plugin-typescript": "^2.0.0",
-    "gatsby-remark-rehype-images": "0.1.0",
     "gatsby-remark-prismjs": "^3.1.2",
+    "gatsby-remark-rehype-images": "0.1.0",
     "gatsby-source-filesystem": "^2.0.0",
     "gatsby-source-graphql": "^2.0.5",
+    "gatsby-source-instagram": "^0.2.0",
     "gatsby-transformer-remark": "^2.0.0",
     "gatsby-transformer-sharp": "^2.0.0",
     "grommet": "^2.1.1",
@@ -56,11 +57,11 @@
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "prettier": "^1.14.2",
-    "typescript": "^3.2.0",
     "tslint": "^5.11.0",
     "tslint-config-blvd": "^1.2.1",
     "tslint-config-prettier": "^1.15.0",
-    "tslint-plugin-prettier": "^2.0.0"
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.2.0"
   },
   "repository": {
     "type": "git"

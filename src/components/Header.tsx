@@ -35,7 +35,7 @@ class Header extends React.Component<HeaderProps, {}> {
                 ) : (
                   <Box direction="row" align="center" gap="small">
                     {site.menu.map(item => (
-                      <Button onClick={() => push(item.path)} label={item.label} />
+                      <Button key={item.path} onClick={() => push(item.path)} label={item.label} />
                     ))}
                   </Box>
                 )

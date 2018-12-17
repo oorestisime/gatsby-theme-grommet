@@ -1,11 +1,10 @@
 import React from 'react';
-import Img from 'gatsby-image';
-import { Box } from 'grommet';
+import NonStretchedImage from './NonStretchedImage';
 
-const Photo = ({ rehyped }) => (
-  <Box alignContent="center">
-    <Img fluid={JSON.parse(rehyped)} />
-  </Box>
-);
+const Photo = ({ rehyped }) => {
+  const props = JSON.parse(rehyped);
+
+  return <NonStretchedImage fluid={props}/>;
+}
 
 export default Photo;

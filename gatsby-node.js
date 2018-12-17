@@ -41,6 +41,7 @@ exports.createPages = ({
                     src
                     sizes
                     srcSet
+                    presentationWidth
                   }
                 }
               }
