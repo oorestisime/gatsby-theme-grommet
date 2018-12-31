@@ -1,12 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Img from 'gatsby-image';
 import { ResponsiveContext, Grid } from 'grommet';
 
-type GridProps = {
-  children: ReactNode[]
-}
-
-const GridComponent: React.SFC<GridProps> = props => (
+const GridComponent = props => (
   <ResponsiveContext.Consumer>
     {size => (
       <Grid

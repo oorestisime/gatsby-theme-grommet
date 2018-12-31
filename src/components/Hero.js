@@ -1,15 +1,11 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import { Box, Heading, ResponsiveContext, Paragraph } from 'grommet'
-import SiteContext from '../context'
+import React from 'react';
+import Img from 'gatsby-image';
+import {
+ Box, Heading, ResponsiveContext, Paragraph,
+} from 'grommet';
+import SiteContext from '../context';
 
-type HeroType = {
-  image: object
-  background?: string | 'dark-4'
-}
-
-const Hero: React.SFC<HeroType> = ({ image, background }) => {
-  return (
+const Hero = ({ image, background }) => (
     <SiteContext.Consumer>
       {site => (
       <Box height="100vh" background={background} align="center" justify="center">
@@ -33,7 +29,6 @@ const Hero: React.SFC<HeroType> = ({ image, background }) => {
       </Box>
     )}
     </SiteContext.Consumer>
-  )
-}
+  );
 
-export default Hero
+export default Hero;

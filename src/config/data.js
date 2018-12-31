@@ -1,24 +1,24 @@
 module.exports = {
   hero: {
-    title: "Gatsby theme Grommet",
-    subtitle: "This an example of gatsby-theme-grommet",
+    title: 'Gatsby theme Grommet',
+    subtitle: 'This an example of gatsby-theme-grommet',
   },
   social: {
-    github: 'https://github.com/oorestisime/gatsby-theme-grommet'
+    github: 'https://github.com/oorestisime/gatsby-theme-grommet',
   },
   menu: [
     {
       label: 'Home',
-      path: '/'
+      path: '/',
     },
     {
       label: 'About',
-      path: '/about'
+      path: '/about',
     },
     {
       label: 'Blog',
-      path: '/blog'
-    }
+      path: '/blog',
+    },
   ],
   instagram: {
     username: 'oasome.blog',
@@ -27,5 +27,5 @@ module.exports = {
   analytics: {
     gaId: undefined,
     domain: undefined,
-  }
-}
+  },
+};

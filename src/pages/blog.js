@@ -1,32 +1,12 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Box, ResponsiveContext, Grid } from 'grommet'
-import Layout from '../components/Layout'
-import Header from '../components/Header'
-import Post from '../components/Post'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Box, ResponsiveContext, Grid } from 'grommet';
+import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Post from '../components/Post';
 
-type SkillsBoxProps = {
-  data: {
-    allMarkdownRemark: {
-      edges: Post[]
-    }
-  }
-}
 
-type Post = {
-  node: {
-    excerpt: string
-    timeToRead: number
-    frontmatter: {
-      title: string
-      path: string
-      tags: string[]
-      date: string
-    }
-  }
-}
-
-const BlogPage: React.SFC<SkillsBoxProps> = ({ data: { allMarkdownRemark } }) => (
+const BlogPage = ({ data: { allMarkdownRemark } }) => (
   <Layout>
     <Header title="Blog" />
     <Box margin={{ horizontal: 'large' }}>
@@ -41,7 +21,7 @@ const BlogPage: React.SFC<SkillsBoxProps> = ({ data: { allMarkdownRemark } }) =>
       </ResponsiveContext.Consumer>
     </Box>
   </Layout>
-)
+);
 
 export const pageQuery = graphql`
   query BlogQuery {
@@ -70,6 +50,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPage
+export default BlogPage;

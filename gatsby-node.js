@@ -8,14 +8,14 @@ const path = require('path');
 
 exports.createPages = ({
   actions,
-  graphql
+  graphql,
 }) => {
   const {
-    createPage
+    createPage,
   } = actions;
 
-  const blogPostTemplate = path.resolve('src/templates/blog.tsx');
-  const tagTemplate = path.resolve('src/templates/tag.tsx');
+  const blogPostTemplate = path.resolve('src/templates/blog.js');
+  const tagTemplate = path.resolve('src/templates/tag.js');
 
   return graphql(`
     {
@@ -57,7 +57,7 @@ exports.createPages = ({
 
     const tags = {};
     result.data.allMarkdownRemark.edges.forEach(({
-      node
+      node,
     }) => {
       if (node.frontmatter.tags) {
         node.frontmatter.tags.forEach((tag) => {
@@ -82,30 +82,8 @@ exports.createPages = ({
           title: tag,
         },
       });
-    })
+    });
 
     return Promise.resolve();
   });
 };
-
-
-exports.onCreateBabelConfig = ({ actions }, options) => {
-  actions.setBabelPreset({
-    name: `@babel/preset-typescript`,
-    options,
-  })
-}
-
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.tsx$/,
-          include: path.dirname(path.resolve("gatsby-theme-grommet")),
-          use: [loaders.js()],
-        },
-      ],
-    },
-  })
-}

@@ -1,12 +1,9 @@
-import React, { ReactChild } from 'react'
-import { ResponsiveContext, Grid, Box, Heading } from 'grommet'
+import React from 'react';
+import {
+ ResponsiveContext, Grid, Box, Heading,
+} from 'grommet';
 
-type SectionType = {
-  title: string
-  children: ReactChild[]
-}
-
-const IndexSection: React.SFC<SectionType> = ({ title, children }) => (
+const IndexSection = ({ title, children }) => (
   <Box margin={{ horizontal: 'xlarge' }}>
     <Box align="center" alignContent="center">
       <Heading textAlign="center" size="medium">
@@ -21,6 +18,6 @@ const IndexSection: React.SFC<SectionType> = ({ title, children }) => (
       )}
     </ResponsiveContext.Consumer>
   </Box>
-)
+);
 
-export default IndexSection
+export default IndexSection;

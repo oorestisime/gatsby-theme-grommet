@@ -1,23 +1,10 @@
-import React from 'react'
-import { Box, Heading, Paragraph, ResponsiveContext } from 'grommet'
-import { Star, Language } from 'grommet-icons'
-type GithubRepoProps = {
-  repo: {
-    node: {
-      nameWithOwner?: string
-      name?: string
-      description: string
-      primaryLanguage: {
-        name?: string
-      }
-      stargazers: {
-        totalCount?: number
-      }
-    }
-  }
-}
-const GithubRepo: React.SFC<GithubRepoProps> = ({ repo }) => {
-  return (
+import React from 'react';
+import {
+ Box, Heading, Paragraph, ResponsiveContext,
+} from 'grommet';
+import { Star, Language } from 'grommet-icons';
+
+const GithubRepo = ({ repo }) => (
   <Box margin="xsmall" animation="fadeIn" pad="xsmall" elevation="small">
     <Heading level="3" margin="xsmall">
       {repo.node.nameWithOwner || repo.node.name}
@@ -41,5 +28,5 @@ const GithubRepo: React.SFC<GithubRepoProps> = ({ repo }) => {
       )}
     </ResponsiveContext.Consumer>
   </Box>
-)}
-export default GithubRepo
+);
+export default GithubRepo;

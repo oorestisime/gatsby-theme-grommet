@@ -1,21 +1,20 @@
-import React from 'react'
-import { push } from 'gatsby'
-import { Box, Button, Heading, ResponsiveContext, Layer, RoutedAnchor, Text } from 'grommet'
-import { Down, Up } from 'grommet-icons'
+import React from 'react';
+import { push } from 'gatsby';
+import {
+ Box, Button, Heading, ResponsiveContext, Layer, RoutedAnchor, Text,
+} from 'grommet';
+import { Down, Up } from 'grommet-icons';
 
-import SiteContext from '../context'
+import SiteContext from '../context';
 
-type HeaderProps = {
-  title?: string | 'Blog'
-}
-
-class Header extends React.Component<HeaderProps, {}> {
+class Header extends React.Component {
   state = {
-    showLayer: false
+    showLayer: false,
   }
 
   render() {
-    const { title } = this.props
+    const { title } = this.props;
+    const { showLayer } = this.state;
     return (
       <SiteContext.Consumer>
         {site => (
@@ -29,8 +28,7 @@ class Header extends React.Component<HeaderProps, {}> {
             </Button>
 
             <ResponsiveContext.Consumer>
-              {size =>
-                size === 'small' ? (
+              {size => (size === 'small' ? (
                   <Button icon={<Down />} onClick={() => this.setState({ showLayer: true })} />
                 ) : (
                   <Box direction="row" align="center" gap="small">
@@ -38,11 +36,11 @@ class Header extends React.Component<HeaderProps, {}> {
                       <Button key={item.path} onClick={() => push(item.path)} label={item.label} />
                     ))}
                   </Box>
-                )
+                ))
               }
             </ResponsiveContext.Consumer>
 
-            {this.state.showLayer && (
+            {showLayer && (
               <Layer full>
                 <Box fill background="light-1" align="start" pad="small">
                   <Button icon={<Up />} onClick={() => this.setState({ showLayer: false })} />
@@ -57,8 +55,8 @@ class Header extends React.Component<HeaderProps, {}> {
           </Box>
         )}
       </SiteContext.Consumer>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

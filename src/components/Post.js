@@ -1,25 +1,14 @@
-import React from 'react'
-import { ResponsiveContext, Box, Heading, Paragraph, Text, Anchor } from 'grommet'
-import { Clock, Calendar } from 'grommet-icons'
-import Img from 'gatsby-image'
+import React from 'react';
+import {
+ ResponsiveContext, Box, Heading, Paragraph, Text, Anchor,
+} from 'grommet';
+import { Clock, Calendar } from 'grommet-icons';
+import Img from 'gatsby-image';
 
-import Tags from './Tags'
+import Tags from './Tags';
 
-type PostProps = {
-  post: {
-    timeToRead: number
-    excerpt: string
-    frontmatter: {
-      title: string
-      date: string
-      tags: string[]
-      path: string
-      photo: object
-    }
-  }
-}
 
-const Post: React.SFC<PostProps> = ({ post }) => (
+const Post = ({ post }) => (
   <Box align="start" fill pad="small">
     <Box fill="horizontal" elevation="small" round="xsmall">
       {post.frontmatter.photo && (
@@ -42,8 +31,7 @@ const Post: React.SFC<PostProps> = ({ post }) => (
           <Anchor href={post.frontmatter.path} label=" Read more" size="small" />
         </Paragraph>
         <ResponsiveContext.Consumer>
-          {size =>
-            size !== 'small' && (
+          {size => size !== 'small' && (
               <Box gap="xsmall" direction="row" wrap align="center">
                 <Tags tags={post.frontmatter.tags} />
               </Box>
@@ -53,6 +41,6 @@ const Post: React.SFC<PostProps> = ({ post }) => (
       </Box>
     </Box>
   </Box>
-)
+);
 
-export default Post
+export default Post;

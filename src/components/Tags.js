@@ -1,12 +1,8 @@
-import React from 'react'
-import { push } from 'gatsby'
-import { Box, Button, Text } from 'grommet'
+import React from 'react';
+import { push } from 'gatsby';
+import { Box, Button, Text } from 'grommet';
 
-type TagsProps = {
-  tags: string[]
-}
-
-const Tags: React.SFC<TagsProps> = ({ tags }) => (
+const Tags = ({ tags }) => (
   <Box direction="row" gap="xsmall">
     {tags.map(tag => (
       <Button key={tag} onClick={() => push(`/tag/${tag.toLowerCase()}`)}>
@@ -16,5 +12,5 @@ const Tags: React.SFC<TagsProps> = ({ tags }) => (
       </Button>
     ))}
   </Box>
-)
-export default Tags
+);
+export default Tags;

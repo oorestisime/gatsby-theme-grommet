@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box, Heading, Anchor } from 'grommet'
-import { Gremlin, Favorite } from 'grommet-icons'
-import SiteContext from '../context'
+import React from 'react';
+import { Box, Heading, Anchor } from 'grommet';
+import { Gremlin, Favorite } from 'grommet-icons';
+import SiteContext from '../context';
 
 const Footer = () => (
   <SiteContext.Consumer>
@@ -17,6 +17,6 @@ const Footer = () => (
       </Box>
     )}
   </SiteContext.Consumer>
-)
+);
 
-export default Footer
+export default Footer;
