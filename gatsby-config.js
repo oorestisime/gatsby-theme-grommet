@@ -1,5 +1,5 @@
 require('dotenv').config();
-const data = require('./src/data');
+const data = require('./src/config/data');
 
 extraPlugins = [];
 

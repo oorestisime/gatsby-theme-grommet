@@ -30,7 +30,7 @@ const Instafeed = () => (
           <Grid
             margin={{ horizontal: 'xsmall' }}
             gap="xxsmall"
-            columns="149px"
+            columns={{ count: 8, size: "auto" }}
             justify="center"
           >
             {data.allInstaNode.edges.map(img => (

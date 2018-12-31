@@ -1,11 +1,11 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Box, Heading, ResponsiveContext, Anchor, Paragraph } from 'grommet'
+import { Box, Heading, ResponsiveContext, Paragraph } from 'grommet'
 import SiteContext from '../context'
 
 type HeroType = {
   image: object
-  background?: string
+  background?: string | 'dark-4'
 }
 
 const Hero: React.SFC<HeroType> = ({ image, background }) => {
@@ -34,10 +34,6 @@ const Hero: React.SFC<HeroType> = ({ image, background }) => {
     )}
     </SiteContext.Consumer>
   )
-}
-
-Hero.defaultProps = {
-  background: 'dark-4'
 }
 
 export default Hero

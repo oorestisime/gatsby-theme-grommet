@@ -1,9 +1,11 @@
 import React from 'react'
 import { push } from 'gatsby'
 import { Box, Button, Text } from 'grommet'
+
 type TagsProps = {
   tags: string[]
 }
+
 const Tags: React.SFC<TagsProps> = ({ tags }) => (
   <Box direction="row" gap="xsmall">
     {tags.map(tag => (

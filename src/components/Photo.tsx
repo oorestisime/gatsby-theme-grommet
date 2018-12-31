@@ -1,7 +1,12 @@
 import React from 'react';
 import NonStretchedImage from './NonStretchedImage';
 
-const Photo = ({ rehyped }) => {
+type PhotoProps = {
+  rehyped: string
+}
+
+
+const Photo: React.SFC<PhotoProps> = ({ rehyped }) => {
   const props = JSON.parse(rehyped);
 
   return <NonStretchedImage fluid={props}/>;

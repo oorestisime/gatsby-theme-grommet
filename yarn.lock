@@ -5571,17 +5571,26 @@ gray-matter@^4.0.0:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-grommet-icons@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-3.2.0.tgz#a2996c59177d93da14db52301551a9dad90dec69"
-  integrity sha512-D4YBzq0VWF+rU3ynviR0EVBCqmobJxqI8+dmgpG+HKOSDyKuUOxTvD91Esb0wcRfTZwX1NVCbhjLak3CGStl9g==
+grommet-icons@^4.0.0, grommet-icons@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-4.1.0.tgz#4705d2828461348ff38ddd2c42b8cd551e0569a0"
+  integrity sha512-S9TqY4R/J/xG6++xNXa5JoQeZ9/jO8b6FgmDOhHAD8Vdx/btPswp2hUliTdQiFZFxne4ILldQoCK0w1xwN9eSA==
+  dependencies:
+    grommet-styles "^0.2.0"
 
-grommet@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.1.1.tgz#9dfc8ed63ca5552fd9fffe48646e674ef548e4d0"
-  integrity sha512-TyOsgyKEENv3bx6eWMuPX9PAIwnIh7rmYbB2Cq1zp96CRqsF50fuE68CcSGbchZ2ZqZ5JKg0S8MatcXKTcESUQ==
+grommet-styles@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/grommet-styles/-/grommet-styles-0.2.0.tgz#b2eac2b7e2747cb523434d21728ce5234f8ce4f4"
+  integrity sha512-0OMSYuGeyifYKpg4Gv2HzL8rUdd0ddnJ5LbCBKgDuloC71XIwr9g/Fxa6rs737MbPV7OZ4pEm4wvrjH4epzf1A==
+
+grommet@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.2.1.tgz#f600fe5296342080ab7a218cfb8ff54f19c5ebc6"
+  integrity sha512-5iJo1K6xZfY46C15xkVyUHBNTxr8U1pa+27rH0fFG8KtU6VocBNRsMMslqKAOpOLX1570G+ect//Ca9DJjWGxQ==
   dependencies:
     css "^2.2.3"
+    grommet-icons "^4.0.0"
+    grommet-styles "^0.2.0"
     hoist-non-react-statics "^3.2.0"
     markdown-to-jsx "^6.6.6"
     mobile-detect "^1.4.3"

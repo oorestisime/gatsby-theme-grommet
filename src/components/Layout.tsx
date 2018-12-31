@@ -1,9 +1,9 @@
 import React, { ReactChild } from 'react'
 import { Grommet } from 'grommet'
 
-import data from '../data'
+import data from '../config/data'
 import SiteContext from '../context'
-import { customTheme, GlobalTheme } from '../theme'
+import { customTheme, GlobalTheme } from '../config/theme'
 import Footer from './Footer'
 import InstaFeed from './InstaFeed';
 

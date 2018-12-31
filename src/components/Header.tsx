@@ -6,7 +6,7 @@ import { Down, Up } from 'grommet-icons'
 import SiteContext from '../context'
 
 type HeaderProps = {
-  title?: string
+  title?: string | 'Blog'
 }
 
 class Header extends React.Component<HeaderProps, {}> {
@@ -22,8 +22,8 @@ class Header extends React.Component<HeaderProps, {}> {
           <Box pad="small" tag="header" direction="row" background="white" align="center" elevation="medium" justify="between">
             <Button>
               <Box flex={false} direction="row" align="center" margin={{ left: 'small' }}>
-                <Heading level="2" margin={{ left: 'small', vertical: 'none' }}>
-                  {title}
+                <Heading level="3" margin={{ left: 'small', vertical: 'none' }}>
+                  {title || site.hero.title}
                 </Heading>
               </Box>
             </Button>
@@ -59,10 +59,6 @@ class Header extends React.Component<HeaderProps, {}> {
       </SiteContext.Consumer>
     )
   }
-}
-
-Header.defaultProps = {
-  title: 'Blog'
 }
 
 export default Header

@@ -29,6 +29,7 @@ type BlogPageType = {
         title: string
         date: string
         tags: string[]
+        photo: object
       }
       htmlAst: object[]
     }

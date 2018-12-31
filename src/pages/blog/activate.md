@@ -3,7 +3,7 @@ path: /activate-features
 title: "Activate extra features"
 date: 2018-12-06
 tags: ["Gatsby","Grommet", "Theme", "Github", "Instagram"]
-
+photo: ./img/fiji.jpg
 ---
 
 Some of the features of this theme can be conditionally activated by filling in
