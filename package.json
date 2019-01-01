@@ -4,6 +4,7 @@
   "version": "0.0.2",
   "author": "Orestis Ioannou <oorestisime@gmail.com>",
   "dependencies": {
+    "@dschau/gatsby-theme-utils": "0.0.3",
     "babel-plugin-styled-components": "^1.9.2",
     "dotenv": "^6.1.0",
     "eslint-config-airbnb": "^17.1.0",

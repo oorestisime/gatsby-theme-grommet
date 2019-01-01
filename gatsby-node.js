@@ -5,6 +5,9 @@
  */
 
 const path = require('path');
+const { addToWebpackConfig } = require('@dschau/gatsby-theme-utils')
+
+const { name: packageName } = require('./package.json')
 
 exports.createPages = ({
   actions,
@@ -87,3 +90,5 @@ exports.createPages = ({
     return Promise.resolve();
   });
 };
+
+exports.onCreateWebpackConfig = addToWebpackConfig(packageName)
