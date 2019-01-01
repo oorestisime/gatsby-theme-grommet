@@ -14,8 +14,8 @@ exports.createPages = ({
     createPage,
   } = actions;
 
-  const blogPostTemplate = path.resolve('src/templates/blog.js');
-  const tagTemplate = path.resolve('src/templates/tag.js');
+  const blogPostTemplate = path.resolve('src/templates/blog.jsx');
+  const tagTemplate = path.resolve('src/templates/tag.jsx');
 
   return graphql(`
     {
